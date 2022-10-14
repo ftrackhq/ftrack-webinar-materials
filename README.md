@@ -4,8 +4,8 @@ As ftrack creates webinars or public conferences, if these require support mater
 
 ## Contributing
 
-See [CONTRIBUTING](https://github.com/ftrackhq/ftrack-webinar-materials/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTING](CONTRIBUTING.md)
 
 ## Licence
 
-See [LICENCE](https://github.com/ftrackhq/ftrack-webinar-materials/blob/main/LICENSE)
+See [LICENCE](LICENSE)
