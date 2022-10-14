@@ -1,0 +1,124 @@
+# Server Side Secret
+#===================
+# This is a secret used server-side. You should not share it with anyone.
+# It should be random and reasonably long (20+ chars). This can be a random
+# string or something like a UUID.
+#===================
+secret: <YOUR_SECRET>
+
+# The URL for your site
+#======================
+# This is the URL by which your site will be accessible.
+#======================
+url: <YOUR_SITE_URL>
+
+# The ftrack site identifier
+#===========================
+# The secret is a value defined by you and supplied to ftrack so that a valid
+# license can be generated for your site.
+# If this id changes, the license will not be able to be validated. ftrack can
+# supply you with a secret if you do not chose one yourself.
+#===========================
+id: <ID_FOR_LICENSE>
+
+# Specifying the MariaDB database
+#================================
+# This section allows you to specify how the ftrack components can reach the
+# database. An IP for the `host` value is required. The `user` and `passoword`
+# values are optional and can be enabled if you do not want to use the
+# defaults of `ftrack_user` and `ftrack_pass`
+#================================
+database:
+    host: 111.222.333.444
+    # user: my-username
+    # password: my-password
+
+# Using local storage resource
+#=============================
+# You can use a local folder for your ftrack data storage
+#=============================
+localPersistentVolume:
+    path: <PATH_TO_YOUR_STORAGE>
+
+# Using an NFS Storage
+#=====================
+# You can mount an NFS storage to your cluster by using the following block
+#=====================
+# nfsPersistentVolume:
+#    enabled: true
+#    path: /STORAGE/PATH
+#    server: NFS-SERVER-IP
+
+# Configure the Image Registry location
+#======================================
+# Kubernetes will need to be able to reach an image registry to pull down
+# container images to run. By default it will try to reach the ftrack image
+# registry. If your Kubernetes cluster is air-gapped from the internet, it will
+# not be able to reach the ftrack image registry. You will need to use your own
+# registry and configure ftrack to use it.
+#
+# The ftrack image registry is provided via Google Cloud's container registry,
+# which has excellent availability and fast access.
+#======================================
+imageRegistry:
+    password: <REGISTRY_PASSWORD>
+    # username: username
+    # server: example.com
+    # prefix: example.com/ftrack-registry
+
+# Setting the number of Pods to serve the application
+#====================================================
+# Each component of the ftrack application stack can be scaled to serve your
+# specific needs. Set the number of replicas of each you would like your
+# cluster to have.
+#====================================================
+# replicas:
+#     server: 1
+#     worker: 1
+#     imageEncoder: 1
+#     thumbor: 1
+#     nginx: 1
+
+# ftrack Application Config Options
+#==================================
+# This section allows you to specify extra configuration options that are meant
+# for ftrack itself, not the setup of the cluster.
+#
+# - ftrack.licenseOverride allows you to specify an ftrack license key
+#==================================
+# config:
+#     ftrack.licenseOverride: <FTRACK_LICENSE_KEY>
+
+# CORS Behaviour
+#===============
+# You may want to customize the CORS behaviour of your on-prem install. These
+# two values help you do that.
+#===============
+# cors:
+#     enabled: true
+#     allowOrigin: $http_origin
+#     maxAge: 86400
+
+# Setting up HTTPS
+#=================
+# This section concerns settings for using ftrack with HTTPS.
+#
+# Uncomment the `ingress -> tls` config if you wish to enable HTTPS. You must
+# setup the certificates yourself.
+# 
+# You can uncomment the `certificate -> selfSigned` section if that is your
+# case. You can use something like LetsEncrypt and KCert to automate the
+# certificate process.
+#=================
+# ingress:
+#     tls: true
+
+# certificate:
+#     selfSigned: true
+
+# Using paster - uWSGI issues on ARM64
+#=====================================
+# If you're running an ARM64, Apple Silicon for example, you may need
+# to use paster instead of uWSGI as the backend server HTTP server.
+#=====================================
+# use_paster: true
