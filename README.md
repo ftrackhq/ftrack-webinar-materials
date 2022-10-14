@@ -1,2 +1,3 @@
-# webinar-support-material
-Some webinar require bespoke support material this is where you'll find those materials.
+# Webinar Support Material
+
+As ftrack creates webinars or public conferences, if these require support materials, you'll be able to find them here.
