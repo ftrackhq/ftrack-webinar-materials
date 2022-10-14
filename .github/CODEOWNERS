@@ -1,0 +1,11 @@
+# People listed in this file may hold technical oversight over the contents
+# of the repository but they should work closely with the people from the
+# marketing and customer success teams as these people are more widely
+# responsible for the contents.
+# Owner of the repo and representative for the marketing and customer success
+# teams
+*   @pboucher
+
+# Individual webinars may override the owner if the individual webinar includes
+# a resource that also has a GitHub account
+/202210_self-hosted-demo/   @pboucher
