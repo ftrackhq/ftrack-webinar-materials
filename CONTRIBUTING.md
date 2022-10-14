@@ -19,4 +19,4 @@ So you're helping create content for a conference or webinar. Thank you! To incl
   - We ask that you branch off `main` and prefix your branch with `feat/`
   - Please adhere to [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for your PR and commit titles.
   - Ensure that all your content is in a subdirectory of the root.
-  - Name the subdirectory in the following format: `YYYYMM[DD]-short-description`, where the year, month and date are the approximate release date of your presentation.
+  - Name the subdirectory in the following format: `YYYYMM[DD]_short-description`, where the year, month and date are the approximate release date of your presentation.
