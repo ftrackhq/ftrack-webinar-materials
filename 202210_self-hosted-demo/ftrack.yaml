@@ -122,3 +122,22 @@ imageRegistry:
 # to use paster instead of uWSGI as the backend server HTTP server.
 #=====================================
 # use_paster: true
+
+# SMTP Email using Oauth2
+#===============
+# You may want to customize the SMTP server you site uses to sent email.
+# These settings show how to do this using Gmail as an example.
+#===============
+#config:
+#    ## Oauth2 Email (example: Gmail SMTP with Oauth2)
+#    mail.on: true
+#    mail.transport: smtp_oauth
+#    mail.smtp_oauth_client_id: XXX
+#    mail.smtp_oauth_client_secret: XXX
+#    mail.smtp_oauth_redirect_url: https://example.com/oauth/email_redirect
+#    mail.smtp.server: smtp.gmail.com:587
+#    mail.message.author: ftrack <no-reply@example.com>
+#    mail.smtp.username: no-reply@example.com
+#    mail.smtp_oauth_token_endpoint: https://oauth2.googleapis.com/token
+#    mail.smtp_oauth_auth_endpoint: https://accounts.google.com/o/oauth2/v2/auth
+#    mail.smtp_oauth_scope: https://mail.google.com/
