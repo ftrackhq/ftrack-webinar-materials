@@ -26,7 +26,8 @@ id: <ID_FOR_LICENSE>
 # This section allows you to specify how the ftrack components can reach the
 # database. An IP for the `host` value is required. The `user` and `passoword`
 # values are optional and can be enabled if you do not want to use the
-# defaults of `ftrack_user` and `ftrack_pass`
+# defaults of `ftrack_user` and `ftrack_pass`. The `name` option allows you to
+# specify the database name to use on the server.
 #================================
 database:
     host: 111.222.333.444
