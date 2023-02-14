@@ -30,6 +30,7 @@ id: <ID_FOR_LICENSE>
 #================================
 database:
     host: 111.222.333.444
+    # name: ftrack
     # user: my-username
     # password: my-password
 
