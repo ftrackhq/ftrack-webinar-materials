@@ -87,9 +87,16 @@ imageRegistry:
 # for ftrack itself, not the setup of the cluster.
 #
 # - ftrack.licenseOverride allows you to specify an ftrack license key
+#
+# - ftrack.extra_component_signature_params and ftrack.extra_component_signature_timeout
+#   are used together to specify the expiry of component URLs. The timeout value is in
+#   seconds and specifies valid total duration of the URL.
 #==================================
 # config:
 #     ftrack.licenseOverride: <FTRACK_LICENSE_KEY>
+#
+#     ftrack.extra_component_signature_params: timeout
+#     ftrack.extra_component_signature_timeout: 3600
 
 # CORS Behaviour
 #===============
